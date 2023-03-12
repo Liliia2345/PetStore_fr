@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #11171f;
 }
 
 /* header part */
@@ -34,6 +35,7 @@
   height: 70vh;
 }
 
+
 .main_hero {
   float: left;
   margin-left: 20%;
@@ -41,23 +43,26 @@
   font-size: 200%;
   font-weight: bold;
   color: white;
+
+
 }
 
 /* header ending */
 
 /* about us */
-.masthead-heading,
-.masthead-intro {
-  text-align: center;
-  color: #fff;
+.about-title {
+  font-size: 200%;
+  font-weight: bold;
+  margin: 2%;
+  color: white;
 }
 
-.masthead {
-  padding: 16em 0;
-  background-image: url(./images/about-pet.jpg);
-  background-color: #1faaff;
-  background-size: cover;
-  background-repeat: no-repeat;
+.about-para {
+  color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 2%;
+  font-size: large;
 }
 
 /* about us ending */
@@ -66,7 +71,7 @@
   padding: 15em 0;
   margin: 2%;
   background-image: url(./images/contact-pet.jpg);
-  background-color: #1faaff;
+
   background-size: cover;
   background-repeat: no-repeat;
 }

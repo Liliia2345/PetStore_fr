@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Carousel from "./Carousel/Carousel";
-import { Typewriter } from "react-simple-typewriter";
+
+import HeroPoster from "./HeroPoster";
 
 export default function ImageCarousel() {
   const [pets, setPets] = useState([]);
@@ -18,33 +19,7 @@ export default function ImageCarousel() {
 
   return (
     <>
-      <div id="headerBgImg">
-        <div className="main_hero">
-          <h1 className="text-5XL">Hello!</h1>
-          <h1>Welcome to our PetShop</h1>
-          <div className="fs-4 px-3 text-2">
-            <span style={{ color: "orange" }}>
-              <Typewriter
-                loop
-                cursor
-                cursorStyle="|"
-                typeSpeed={100}
-                deleteSpeed={70}
-                delaySpeed={1000}
-                words={[
-                  "Happy pets, happy life.",
-                  "Where pets are family.",
-                  "Love is a four-legged word.",
-                ]}
-              />
-            </span>
-          </div>
-          {/* <div id="image_hero">
-              <img src={Ateev1} alt="Ateev" className="image_hero" />
-            </div> */}
-        </div>
-      </div>
-
+      <HeroPoster />
       <div
         style={{
           maxWidth: 1200,

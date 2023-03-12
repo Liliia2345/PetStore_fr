@@ -40,34 +40,34 @@ function Header() {
               </NavLink>
             </div>
             <div className="hidden md:block">
-              <div className="flex items-center space-x-4 px-5 py-3">
+              <div className="flex items-center space-x-4 px-5 py-2">
                 <NavLink
                   to="/"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
+                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
                 >
                   Home
                 </NavLink>
                 <NavLink
                   to="/about"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
+                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
                 >
                   About
                 </NavLink>
                 <NavLink
                   to="/adopt"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
+                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
                 >
                   Adopt
                 </NavLink>
                 <NavLink
                   to="/donate"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
+                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
                 >
                   Donate
                 </NavLink>
                 <NavLink
                   to="/contact"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
+                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
                 >
                   Contact
                 </NavLink>
