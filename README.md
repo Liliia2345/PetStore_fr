@@ -1,4 +1,4 @@
-# Pokemons app
+# PetStore_fr app
 
 - CRUD fullstack application using (MongoDB,Express,React and 
 Node) (MERN)
