@@ -4,22 +4,46 @@ import { Link } from "react-router-dom";
 
 function Pets() {
   const [pets, setPets] = useState([]);
+
   useEffect(() => {
     axios
-      .get(`${process.env.MONGODB_ATLAS_CONNECTION_STRING}`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/pets`)
       .then((res) => setPets(res.data))
       .catch((e) => console.log(e));
   }, []);
 
   return (
-    <div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       {pets.map((pet) => (
-        <p key={pet._id}>
-          <Link to={`/pet/${pet._id}`}>{pet.breed}</Link>
-        </p>
+        <div
+          key={pet._id}
+          className="bg-white rounded-lg overflow-hidden shadow-lg"
+        >
+          <Link to={`/pets/${pet._id}`}>
+            <img
+              src={pet.image}
+              alt={pet.animalType}
+              className="w-full h-48 object-cover"
+            />
+          </Link>
+          <div className="p-4">
+            <h2 className="text-xl font-semibold">
+              {pet.animalType} - {pet.breed}
+            </h2>
+            <p className="text-gray-700">
+              {pet.size}, {pet.age} years old, {pet.gender}
+            </p>
+            <Link
+              to={`/pets/${pet._id}`}
+              className="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              See more details
+            </Link>
+          </div>
+        </div>
       ))}
     </div>
   );
 }
 export default Pets;
-//➢ home page to show all user added pokemons
+//➢ home page to show all user added pets
