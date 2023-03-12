@@ -1,22 +1,17 @@
-
-//import logo from './logo.svg';
 import React from "react";
-import './App.css';
-import Footer from './components/Footer'
-
+import "./App.css";
+import Pets from "./components/Pets";
+import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  return (<div>
-    
-      <h1 className ='justify-center text-5xl text-violet-400 bg-gray-800'>Welcome to our Petshop</h1>
-      
-      <Footer/>
-      
-      
-
-
-  </div>
-    
+  return (
+    <div className="App">
+      <Routes>
+      <Route path="/api/pets" element={<Pets />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
