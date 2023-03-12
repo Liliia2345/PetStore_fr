@@ -34,6 +34,15 @@
   height: 70vh;
 }
 
+.main_hero {
+  float: left;
+  margin-left: 20%;
+  margin-top: 13%;
+  font-size: 200%;
+  font-weight: bold;
+  color: white;
+}
+
 /* header ending */
 
 /* about us */
