@@ -10,7 +10,7 @@ function Contact() {
           </div>
 
           <div class="mt-5 md:col-span-2 md:mt-0">
-            <h1 class="about-title">Personal Information</h1>
+            <h1 class="title">Personal Information</h1>
             <form action="#" method="POST">
               <div class="overflow-hidden shadow sm:rounded-md">
                 <div class="px-4 py-5 sm:p-6">
