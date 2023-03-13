@@ -6,7 +6,7 @@ function About() {
     <>
       <HeroPoster />
       <section>
-        <h1 className="about-title">About us</h1>
+        <h1 className="title">About us</h1>
         <p className="about-para">
           Welcome to <b>PetShop! 🐈</b> We're a team of passionate pet owners
           who want to make it easier for people to care for their furry friends.
