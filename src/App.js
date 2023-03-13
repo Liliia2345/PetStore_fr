@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/api/Petshop" element={<Pets />}></Route>
-          <Route path="/api/petshop/:_id" element={<PetDetails />}></Route>
+          <Route path="/api/Petshop/:_id" element={<PetDetails />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/adopt"></Route>
           <Route path="/donate"></Route>
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

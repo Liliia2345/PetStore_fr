@@ -1,14 +1,16 @@
 import React from "react";
-
-import ImageCarousel from "./ImageCarousel";
+import HeroPoster from "./HeroPoster";
 import Pets from "./Pets";
 
+import ImageCarousel from "./ImageCarousel";
 
 export default function Home() {
   return (
     <>
-      <ImageCarousel />
-      <Pets/>
+      <HeroPoster />
+      <ImageCarousel animalType="Cat" />
+      <ImageCarousel animalType="Dog" />
+      <Pets />
     </>
   );
 }
