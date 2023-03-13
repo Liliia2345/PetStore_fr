@@ -15,7 +15,7 @@ function Pets() {
   return (
     <>
       <h1 className="title">Pet List</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-10 px-10 gap-5 xl:grid-cols-5 xl:gap-x-8">
         {pets.map((pet) => (
           <div
             key={pet._id}
@@ -23,6 +23,7 @@ function Pets() {
           >
             <Link
               to={`${process.env.REACT_APP_SERVER_BASE_URL}/api/Petshop/${pet._id}`}
+
             >
               <img
                 src={pet?.image}
