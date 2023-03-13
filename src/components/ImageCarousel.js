@@ -7,7 +7,7 @@ export default function ImageCarousel({ animalType }) {
   const [pets, setPets] = useState([]);
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_SERVER_BASE_URL}/api/Petshop`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/Petshop`)
       .then((res) => {
         setPets(res.data);
       })
@@ -34,7 +34,7 @@ export default function ImageCarousel({ animalType }) {
             <div key={e._id}>
               <div style={{ padding: 8 }}>
                 <Link
-                  to={`${process.env.REACT_APP_SERVER_BASE_URL}/api/Petshop/${e._id}`}
+                  to={`${process.env.REACT_APP_BACKEND_URL}/api/Petshop/${e._id}`}
                 >
                   <img
                     src={e?.image}
