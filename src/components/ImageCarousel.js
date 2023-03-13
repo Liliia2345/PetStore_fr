@@ -2,11 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Carousel from "./Carousel/Carousel";
-import Pets from "./Pets";
 
-import HeroPoster from "./HeroPoster";
-
-export default function ImageCarousel() {
+export default function ImageCarousel({ animalType }) {
   const [pets, setPets] = useState([]);
   useEffect(() => {
     axios
@@ -18,19 +15,22 @@ export default function ImageCarousel() {
       .catch((e) => console.log(e));
   }, []);
 
+  const filterList = pets.filter((pet) => pet.animalType === animalType);
+  console.log(filterList);
+
   return (
     <>
-      <HeroPoster />
+      <h1 className="title">{animalType}</h1>
       <div
         style={{
           maxWidth: 1200,
           marginLeft: "auto",
           marginRight: "auto",
-          marginTop: 64,
+          marginTop: 10,
         }}
       >
         <Carousel show={4}>
-          {pets.map((e) => (
+          {filterList.map((e) => (
             <div key={e._id}>
               <div style={{ padding: 8 }}>
                 <Link
@@ -47,8 +47,6 @@ export default function ImageCarousel() {
             </div>
           ))}
         </Carousel>
-
-        <Pets />
       </div>
     </>
   );
