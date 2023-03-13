@@ -9,7 +9,7 @@ export default function ImageCarousel() {
   const [pets, setPets] = useState([]);
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_SERVER_BASE_URL}/api/Petshop`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/Petshop`)
       .then((res) => {
         setPets(res.data);
       })
