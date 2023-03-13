@@ -10,10 +10,10 @@ function PetsDetails() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.MONGODB_ATLAS_CONNECTION_STRING}`)
+      .get(`${process.env.MONGODB_ATLAS_CONNECTION_STRING}/api/pets/${_id}`)
       .then((res) => setPet(res.data))
       .catch((e) => console.log(e));
-  }, [id]);
+  }, [_id]);
 
   const handleDelete = (e) => {
     axios

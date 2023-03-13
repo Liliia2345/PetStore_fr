@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import Carousel from "./Carousel/Carousel";
 
 import HeroPoster from "./HeroPoster";
@@ -31,13 +32,13 @@ export default function ImageCarousel() {
           {pets.map((e) => (
             <div key={e._id}>
               <div style={{ padding: 8 }}>
-                {/* <Link to={`/${e._id}`}> */}
-                <img
-                  src={e.image}
-                  alt="placeholder"
-                  style={{ width: "100%" }}
-                />
-                {/* </Link> */}
+                <Link to={`api/pets/${e._id}`}>
+                  <img
+                    src={e?.image}
+                    alt="placeholder"
+                    style={{ width: "100%" }}
+                  />
+                </Link>
               </div>
             </div>
           ))}
