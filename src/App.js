@@ -5,6 +5,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
 import Pets from "./components/Pets";
+import PetDetails from "./components/PetDetails";
 import Footer from "./components/Footer";
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/api/Petshop" element={<Pets />}></Route>
+          <Route path="/api/petshop/:_id" element={<PetDetails />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/adopt"></Route>
           <Route path="/donate"></Route>
