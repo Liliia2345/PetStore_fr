@@ -1,17 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
-
+import { useNavigate, useParams, Link } from "react-router-dom";
 const PetDetails = () => {
   const [pet, setPet] = useState([]);
   const { _id } = useParams();
+  const navigate = useNavigate();
+  const [deletePet, setDeletePet] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/Petshop/${_id}`)
+
+      .then((res) => setPet(res.data))
+      .catch((e) => console.log(e));
+  }, [_id]);
+
+  const handleDelete = (e) => {
+    axios
+      .delete(`${process.env.REACT_APP_BACKEND_URL}/api/Petshop/${_id}`)
+      .then((res) => navigate("/api/Petshop"))
+      .catch((e) => console.log(e));
+    setDeletePet(!deletePet);
+  };
 
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/api/Petshop/${_id}`)
       .then((res) => setPet(res.data))
       .catch((e) => console.log(e));
-  }, [_id]);
+  }, [deletePet]);
 
   return (
     <div className="container mx-auto">
@@ -52,10 +69,21 @@ const PetDetails = () => {
                 <span className="text-gray-800 font-medium">Care:</span>{" "}
                 {pet.care}
               </p>
-              <div className="mt-4">
-                <button className="bg-gray-800 text-white font-bold py-2 px-4 rounded">
-                  Adopt {pet.name}
-                </button>
+              <div className="grid gap-4 grid-cols-2">
+                <Link>
+                  <button className="bg-gray-800  grid gap-4  text-white font-bold py-2 px-5 rounded">
+                    Update {pet.name}
+                  </button>
+                </Link>
+
+                <Link>
+                  <button
+                    onClick={handleDelete}
+                    className="bg-gray-800 text-white   grid gap-4   font-bold py-2 px-5 rounded"
+                  >
+                    Delete {pet.name}
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

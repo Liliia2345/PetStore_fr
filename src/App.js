@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Pets from "./components/Pets";
 import PetDetails from "./components/PetDetails";
 import Footer from "./components/Footer";
+import PetsDetails from "./components/PetDetails";
 function App() {
   return (
     <div className="App">
