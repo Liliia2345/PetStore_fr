@@ -22,7 +22,7 @@ function Pets() {
             className="bg-white rounded-lg overflow-hidden shadow-lg"
           >
             <Link
-              to={`${process.env.REACT_APP_BACKEND_URL}/api/Petshop/${pet._id}`}
+              to={`/Petshop/${pet._id}`}
             >
               <img
                 src={pet?.image}
@@ -38,8 +38,8 @@ function Pets() {
                 {pet.size}, {pet.age} years old, {pet.gender}
               </p>
               <Link
-                to={`${process.env.REACT_APP_BACKEND_URL}/api/Petshop/${pet._id}`}
-                className="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              to={`/Petshop/${pet._id}`}
+              className="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               >
                 See more details
               </Link>
