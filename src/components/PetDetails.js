@@ -8,7 +8,7 @@ const PetDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/api/petshop/${_id}`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/Petshop/${_id}`)
       .then((res) => setPet(res.data))
       .catch((e) => console.log(e));
   }, [_id]);
@@ -27,10 +27,10 @@ const PetDetails = () => {
             </div>
             <div className="p-8">
               <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                {pet.size} {pet.breed}
+                {pet.animalType}
               </div>
               <h1 className="block mt-1 text-lg leading-tight font-medium text-black">
-                {pet.name}
+                {pet.breed}
               </h1>
               <p className="mt-2 text-gray-500">
                 <span className="text-gray-800 font-medium">Age:</span>{" "}
@@ -39,6 +39,10 @@ const PetDetails = () => {
               <p className="mt-2 text-gray-500">
                 <span className="text-gray-800 font-medium">Gender:</span>{" "}
                 {pet.gender}
+              </p>
+              <p className="mt-2 text-gray-500">
+                <span className="text-gray-800 font-medium">Size:</span>{" "}
+                {pet.size}
               </p>
               <p className="mt-2 text-gray-500">
                 <span className="text-gray-800 font-medium">Playfulness:</span>{" "}
