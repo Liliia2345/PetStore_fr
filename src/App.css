@@ -77,3 +77,14 @@
 }
 
 /* conatus ending */
+/* petdetails section staring--- */
+.petDetailsImages {
+  width: 100%;
+  /* object-fit: fill;
+  display: flex; */
+  margin-top: 2%;
+  margin-bottom: 4%;
+  box-shadow: 1px 1px 1px black;
+}
+
+/* petdetails section  ending----*/
