@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Pets from "./components/Pets";
 import PetDetails from "./components/PetDetails";
 import Footer from "./components/Footer";
+import NewPet from "./components/NewPet";
 import PetsDetails from "./components/PetDetails";
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/api/Petshop" element={<Pets />}></Route>
           <Route path="/Petshop/:_id" element={<PetDetails />}></Route>
           <Route path="/about" element={<About />}></Route>
+          <Route path="/newPet" element={<NewPet />}></Route>
           <Route path="/adopt"></Route>
           <Route path="/donate"></Route>
           <Route path="/contact" element={<Contact />}></Route>
