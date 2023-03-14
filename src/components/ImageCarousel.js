@@ -20,7 +20,7 @@ export default function ImageCarousel({ animalType }) {
 
   return (
     <>
-      <h1 className="title">{animalType}</h1>
+      {/* <h1 className="title">{animalType}s</h1> */}
       <div
         style={{
           maxWidth: 1200,
@@ -30,12 +30,10 @@ export default function ImageCarousel({ animalType }) {
         }}
       >
         <Carousel show={4}>
-          {filterList.map((e) => (
+          {pets.map((e) => (
             <div key={e._id}>
               <div style={{ padding: 8 }}>
-                <Link
-                  to={`${process.env.REACT_APP_BACKEND_URL}/api/Petshop/${e._id}`}
-                >
+                <Link to={`/Petshop/${e._id}`}>
                   <img
                     src={e?.image}
                     alt="placeholder"
