@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams, Link } from "react-router-dom";
+import UpdatePet from  "./UpdatePet";
 const PetDetails = () => {
   const [pet, setPet] = useState([]);
   const { _id } = useParams();
@@ -70,10 +71,11 @@ const PetDetails = () => {
                 {pet.care}
               </p>
               <div className="grid gap-4 grid-cols-2">
-                <Link>
-                  <button className="bg-gray-800  grid gap-4  text-white font-bold py-2 px-5 rounded">
-                    Update {pet.name}
-                  </button>
+                <Link
+                to={`/updatePet/${pet._id}`}
+                  className="bg-gray-800  grid gap-4  text-white font-bold py-2 px-5 rounded">
+                    Update{/*{pet.name}*/}
+                
                 </Link>
 
                 <Link>
