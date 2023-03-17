@@ -17,7 +17,7 @@ function Pets() {
       <div className="grid grid-cols-2 mt-4 place-items-center">
         <h1 className="title">Pet List</h1>
         <Link to={"/newPet"}>
-          <button class="place-items-center bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+          <button className="place-items-center bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
