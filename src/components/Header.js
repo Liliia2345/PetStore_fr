@@ -10,33 +10,12 @@ function Header() {
 
   return (
     <>
-      {/* <nav>
-        <NavLink to="/" className="link-item ">
-          Home
-        </NavLink>
-        <NavLink to="/about" className="link-item ">
-          About Us
-        </NavLink>
-        <NavLink to="/adopt" className="link-item">
-          Adopt
-        </NavLink>
-        <NavLink to="/donate" className="link-item">
-          Donate
-        </NavLink>
-        <NavLink to="/contact" className="link-item">
-          Contact us
-        </NavLink>
-        <button id="join" type="button">
-          Join Us
-        </button>
-      </nav> */}
-
       <nav className="bg-gray-800">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex-shrink-0 flex items-center">
               <NavLink to="/" className="text-white font-bold">
-                PetShop
+                <span className="material-symbols-outlined">PetShop</span>
               </NavLink>
             </div>
             <div className="hidden md:block">
@@ -46,6 +25,18 @@ function Header() {
                   className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
                 >
                   Home
+                </NavLink>
+                <NavLink
+                  to="/api/Petshop"
+                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
+                >
+                  Pet list
+                </NavLink>
+                <NavLink
+                  to="/api/Petsapi"
+                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
+                >
+                  Pets API
                 </NavLink>
                 <NavLink
                   to="/about"
