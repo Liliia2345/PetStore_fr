@@ -9,7 +9,8 @@ import PetDetails from "./components/PetDetails";
 import Footer from "./components/Footer";
 import NewPet from "./components/NewPet";
 import UpdatePet from "./components/UpdatePet";
-import PetsDetails from "./components/PetDetails";
+import PetFromAPIDetails from "./components/PetsFromAPIDetails";
+import PetsFromAPI from "./components/PetsFromAPI";
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,8 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/api/Petshop" element={<Pets />}></Route>
           <Route path="/Petshop/:_id" element={<PetDetails />}></Route>
+          <Route path="/api/Petsapi" element={<PetsFromAPI />}></Route>
+          <Route path="/Petsapi/:id" element={<PetFromAPIDetails />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/newPet" element={<NewPet />}></Route>
           <Route path="/updatePet/:_id" element={<UpdatePet />}></Route>
