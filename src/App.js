@@ -9,6 +9,8 @@ import PetDetails from "./components/PetDetails";
 import Footer from "./components/Footer";
 import NewPet from "./components/NewPet";
 import PetsDetails from "./components/PetDetails";
+import Comments from "./components/comments/Comments";
+
 function App() {
   return (
     <div className="App">
@@ -22,10 +24,18 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/newPet" element={<NewPet />}></Route>
           <Route path="/adopt"></Route>
-          <Route path="/donate"></Route>
+          <Route
+            path="/comments"
+            element={
+              <Comments
+                commentsUrl="http://localhost:3000/comments"
+                currentUserId="1"
+              />
+            }></Route>
           <Route path="/contact" element={<Contact />}></Route>
         </Routes>
       </div>
+
       <Footer />
     </div>
   );
