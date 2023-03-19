@@ -44,10 +44,10 @@ const PetDetails = () => {
               />
             </div>
             <div className="p-8">
-              <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+              <div className="uppercase tracking-wide text-lg text-indigo-500 font-semibold">
                 {pet.animalType}
               </div>
-              <h1 className="block mt-1 text-lg leading-tight font-medium text-black">
+              <h1 className="block mt-1 text-lg leading-tight font-bold text-black">
                 {pet.breed}
               </h1>
               <p className="mt-2 text-gray-500">

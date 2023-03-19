@@ -1,7 +1,5 @@
-import { Route, Routes } from "react-router-dom";
-import { useState } from "react";
-
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Search from "./components/Search";
 import SearchResults from "./components/SearchResults";
@@ -15,15 +13,19 @@ import NewPet from "./components/NewPet";
 import UpdatePet from "./components/UpdatePet";
 import PetFromAPIDetails from "./components/PetsFromAPIDetails";
 import PetsFromAPI from "./components/PetsFromAPI";
+import { useState } from "react";
+
 
 function App() {
-  const [SearchResults, setResults] = useState([]);
+  const [query, setQuery] = useState("");
+  const handleSearch = (query) => {
+    setQuery(query);
+  };
 
   return (
     <div className="App">
       <Header />
-      <Search setResults={setResults} />
-      <SearchResults SearchResults={searchResults} />
+      <Search handleSearch={handleSearch}/>
       <div>
         <Routes>
         <Route path="/search/:query" element={<SearchResults />} /> 
