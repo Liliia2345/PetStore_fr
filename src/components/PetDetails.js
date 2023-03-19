@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import UpdatePet from  "./UpdatePet";
+import moment from 'moment';
+
+
 const PetDetails = () => {
   const [pet, setPet] = useState([]);
   const { _id } = useParams();
@@ -69,6 +71,9 @@ const PetDetails = () => {
               <p className="mt-2 text-gray-500">
                 <span className="text-gray-800 font-medium">Care:</span>{" "}
                 {pet.care}
+              </p>
+              <p className="mt-2 text-gray-500">
+              Pet added {moment(pet.createdAt).fromNow()}
               </p>
               <div className="grid gap-4 grid-cols-2">
                 <Link
