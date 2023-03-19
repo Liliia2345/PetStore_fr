@@ -83,7 +83,7 @@ function NewPet() {
     }
 
     axios
-      .post(`${process.env.REACT_APP_BACKEND_URL}/api/petshop`, {
+      .post(`${process.env.REACT_APP_BACKEND_URL}/api/Petshop`, {
         animalType,
         breed,
         size,

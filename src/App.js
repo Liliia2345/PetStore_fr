@@ -1,6 +1,8 @@
-import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
+import Search from "./components/Search";
+import SearchResults from "./components/SearchResults";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
@@ -11,13 +13,22 @@ import NewPet from "./components/NewPet";
 import UpdatePet from "./components/UpdatePet";
 import PetFromAPIDetails from "./components/PetsFromAPIDetails";
 import PetsFromAPI from "./components/PetsFromAPI";
+import { useState } from "react";
+
+
 function App() {
+  const [query, setQuery] = useState("");
+  const handleSearch = (query) => {
+    setQuery(query);
+  };
+
   return (
     <div className="App">
       <Header />
-
+      <Search handleSearch={handleSearch}/>
       <div>
         <Routes>
+        <Route path="/search/:query" element={<SearchResults />} /> 
           <Route path="/" element={<Home />}></Route>
           <Route path="/api/Petshop" element={<Pets />}></Route>
           <Route path="/Petshop/:_id" element={<PetDetails />}></Route>
