@@ -1,6 +1,10 @@
 import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
+
 import "./App.css";
 import Header from "./components/Header";
+import Search from "./components/Search";
+import SearchResults from "./components/SearchResults";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
@@ -8,14 +12,18 @@ import Pets from "./components/Pets";
 import PetDetails from "./components/PetDetails";
 import Footer from "./components/Footer";
 import NewPet from "./components/NewPet";
-import PetsDetails from "./components/PetDetails";
+
 function App() {
+  const [searchResults, setResults] = useState([]);
+
   return (
     <div className="App">
       <Header />
+      <Search handleSearch={handleSearch} />
 
       <div>
         <Routes>
+        <Route path="/search/:query" element={<SearchResults />} /> 
           <Route path="/" element={<Home />}></Route>
           <Route path="/api/Petshop" element={<Pets />}></Route>
           <Route path="/Petshop/:_id" element={<PetDetails />}></Route>
