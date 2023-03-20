@@ -22,8 +22,7 @@ function Header() {
               <div className="flex items-center space-x-4 px-5 py-2">
                 <NavLink
                   to="/"
-                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
-                >
+                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium">
                   Home
                 </NavLink>
                 <NavLink
@@ -40,26 +39,22 @@ function Header() {
                 </NavLink>
                 <NavLink
                   to="/about"
-                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
-                >
+                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium">
                   About
                 </NavLink>
                 <NavLink
                   to="/adopt"
-                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
-                >
+                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium">
                   Adopt
                 </NavLink>
                 <NavLink
-                  to="/donate"
-                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
-                >
-                  Donate
+                  to="/comments"
+                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium">
+                  Comment section
                 </NavLink>
                 <NavLink
                   to="/contact"
-                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium"
-                >
+                  className="text-gray-50 hover:bg-gray-700 hover:text-white px-5 py-3 rounded-md text-sm font-medium">
                   Contact
                 </NavLink>
               </div>
@@ -68,8 +63,7 @@ function Header() {
               <button
                 onClick={toggleMenu}
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                aria-expanded="false"
-              >
+                aria-expanded="false">
                 <span className="sr-only">Open main menu</span>
                 {!isOpen ? (
                   <svg
@@ -78,8 +72,7 @@ function Header() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    aria-hidden="true"
-                  >
+                    aria-hidden="true">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -94,8 +87,7 @@ function Header() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    aria-hidden="true"
-                  >
+                    aria-hidden="true">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -113,32 +105,27 @@ function Header() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <NavLink
                 to="/"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Home
               </NavLink>
               <NavLink
                 to="/about"
-                className="text-gray-300 hover:bg-gray-700  hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+                className="text-gray-300 hover:bg-gray-700  hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 About
               </NavLink>
               <NavLink
                 to="/adopt"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Adopt
               </NavLink>
               <NavLink
-                to="/donate"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Donate
+                to="/comments"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Comment section
               </NavLink>
               <NavLink
                 to="/contact"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Contact
               </NavLink>
             </div>

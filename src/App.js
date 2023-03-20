@@ -10,11 +10,11 @@ import Pets from "./components/Pets";
 import PetDetails from "./components/PetDetails";
 import Footer from "./components/Footer";
 import NewPet from "./components/NewPet";
+import Comments from "./components/comments/Comments";
 import UpdatePet from "./components/UpdatePet";
 import PetFromAPIDetails from "./components/PetsFromAPIDetails";
 import PetsFromAPI from "./components/PetsFromAPI";
 import { useState } from "react";
-
 
 function App() {
   const [query, setQuery] = useState("");
@@ -38,10 +38,18 @@ function App() {
           <Route path="/newPet" element={<NewPet />}></Route>
           <Route path="/updatePet/:_id" element={<UpdatePet />}></Route>
           <Route path="/adopt"></Route>
-          <Route path="/donate"></Route>
+          <Route
+            path="/comments"
+            element={
+              <Comments
+                commentsUrl="http://localhost:3000/comments"
+                currentUserId="1"
+              />
+            }></Route>
           <Route path="/contact" element={<Contact />}></Route>
         </Routes>
       </div>
+
       <Footer />
     </div>
   );

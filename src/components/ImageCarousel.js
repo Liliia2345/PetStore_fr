@@ -27,8 +27,7 @@ export default function ImageCarousel({ animalType }) {
           marginLeft: "auto",
           marginRight: "auto",
           marginTop: 10,
-        }}
-      >
+        }}>
         <Carousel show={4}>
           {pets.map((e) => (
             <div key={e._id}>
