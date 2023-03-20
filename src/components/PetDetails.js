@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams, Link } from "react-router-dom";
+import moment from 'moment';
+
+
 const PetDetails = () => {
   const [pet, setPet] = useState([]);
   const { _id } = useParams();
@@ -43,10 +46,10 @@ const PetDetails = () => {
               />
             </div>
             <div className="p-8">
-              <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+              <div className="uppercase tracking-wide text-lg text-indigo-500 font-semibold">
                 {pet.animalType}
               </div>
-              <h1 className="block mt-1 text-lg leading-tight font-medium text-black">
+              <h1 className="block mt-1 text-lg leading-tight font-bold text-black">
                 {pet.breed}
               </h1>
               <p className="mt-2 text-gray-500">
@@ -69,11 +72,15 @@ const PetDetails = () => {
                 <span className="text-gray-800 font-medium">Care:</span>{" "}
                 {pet.care}
               </p>
+              <p className="mt-2 text-gray-500">
+              Pet added {moment(pet.createdAt).fromNow()}
+              </p>
               <div className="grid gap-4 grid-cols-2">
-                <Link>
-                  <button className="bg-gray-800  grid gap-4  text-white font-bold py-2 px-5 rounded">
-                    Update {pet.name}
-                  </button>
+                <Link
+                to={`/updatePet/${pet._id}`}
+                  className="bg-gray-800  grid gap-4  text-white font-bold py-2 px-5 rounded">
+                    Update{/*{pet.name}*/}
+                
                 </Link>
 
                 <Link>
